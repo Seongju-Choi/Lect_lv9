@@ -1,4 +1,6 @@
-package model;
+package controller;
+
+import model.Bank;
 
 public class BankManager {
 	
