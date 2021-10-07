@@ -6,11 +6,12 @@ import java.util.ArrayList;
 
 public class UserManager {
 	
+	public static UserManager instance = new UserManager(); 
 	private UserManager() {
 		
 	}
 	
-	public static UserManager instance = new UserManager(); 
+	// users
 	private ArrayList<User> users = new ArrayList<>();
 	
 	private void joinUser() {
@@ -20,6 +21,9 @@ public class UserManager {
 		String pw = Bank.sc.next();
 		System.out.print("name : ");
 		String name = Bank.sc.next();
+		
+	}
+	private void login() {
 		
 	}
 	

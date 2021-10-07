@@ -4,14 +4,17 @@ import model.Bank;
 
 public class BankManager {
 	
+	private UserManager um = UserManager.instance;
+	
+	public static BankManager instance = new BankManager();
 	private BankManager() {
 		
 	}
-	public static BankManager instance = new BankManager();
 	
 	public void run() {
 		boolean isRun = true;
 		while(isRun) {
+			System.out.println(Bank.getName() + "ATM");
 			printMenu();
 			selectMenu();
 		}
@@ -24,16 +27,28 @@ public class BankManager {
 		else System.out.println("1.°èÁÂ°³¼³/Ã¶È¸\n2.ÀºÇà¾÷¹«\3.·Î±×¾Æ¿ô");
 	}
 	private void selectMenu() {
-		System.out.print("menu : ");
-		int sel = Bank.sc.nextInt();
+		String input = Bank.sc.next();
 		
-		if(sel == 1) {
+		try {
 			
-		}
-		else if(sel == 2) {
-			
-		}
-		else if(sel == 3) {
+			if(Bank.log == -1) {
+				System.out.print("menu : ");
+				int sel = Integer.parseInt(input);
+				
+				if(sel == 1) {
+					Bank.log = um.login();
+				}
+				else if(sel == 2) {
+					um.joinUser();
+				}
+				else if(sel == 3) {
+					
+				}
+			}
+			else {
+				
+			}
+		} catch(Exception e){
 			
 		}
 	}
