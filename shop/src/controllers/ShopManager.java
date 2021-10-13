@@ -1,11 +1,13 @@
 package controllers;
 
-import models.Shop;
+import java.util.Scanner;
 import controllers.UserManager;
 
 public class ShopManager {
 	
+	public static Scanner sc = new Scanner(System.in);
 	public static ShopManager instance = new ShopManager();
+	UserManager um = UserManager.instance;
 	
 	private ShopManager(){
 		
@@ -22,16 +24,27 @@ public class ShopManager {
 	
 	public void selectMenu() {
 		
-		int sel = Shop.sc.nextInt();
+		int sel = sc.nextInt();
 		
-		if(sel == 1) {}
-		else if(sel == 2) {}
-		else if(sel == 3) {}
-		else if(sel == 4) {}
-		else if(sel == 100) {}
-		else if(sel == 0) {}
+		if(sel == 1) {
+			um.joinUser();
+		}
+		else if(sel == 2) {
+			um.deleteAcc();
+		}
+		else if(sel == 3) {
+			
+		}
+		else if(sel == 4) {
+			
+		}
+		else if(sel == 100) {
+			
+		}
+		else if(sel == 0) {
+			
+		}
 		
 	}
 	
-	public void 
 }
