@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Shop;
+import controllers.UserManager;
 
 public class ShopManager {
 	
