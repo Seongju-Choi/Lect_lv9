@@ -33,5 +33,5 @@ public class ShopManager {
 		
 	}
 	
-//	public void 
+	public void 
 }
