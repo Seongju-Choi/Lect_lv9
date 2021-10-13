@@ -4,12 +4,15 @@ import models.Shop;
 
 public class ShopManager {
 	
+	public static ShopManager instance = new ShopManager();
+	
 	private ShopManager(){
 		
 	}
 	
 	public void run() {
-		
+		printMenu();
+		selectMenu();
 	}
 	
 	public void printMenu() {

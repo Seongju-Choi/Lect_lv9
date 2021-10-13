@@ -1,11 +1,12 @@
 
-import models.Shop;
+import controllers.ShopManager;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Shop sh = new Shop();
-
+		ShopManager sm = ShopManager.instance;
+		
+		sm.run();
 	}
 
 }
