@@ -31,6 +31,5 @@ public class ShopManager {
 		else if(sel == 100) {}
 		else if(sel == 0) {}
 		
-		
 	}
 }
