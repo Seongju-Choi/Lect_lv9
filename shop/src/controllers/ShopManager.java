@@ -32,4 +32,6 @@ public class ShopManager {
 		else if(sel == 0) {}
 		
 	}
+	
+//	public void 
 }
