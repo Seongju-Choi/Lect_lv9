@@ -33,10 +33,11 @@ public class ShopManager {
 			um.deleteAcc();
 		}
 		else if(sel == 3) {
-			
+			um.login();
 		}
 		else if(sel == 4) {
-			
+			System.out.println("=== 로그아웃 완료 ===");
+			um.log = -1;
 		}
 		else if(sel == 100) {
 			

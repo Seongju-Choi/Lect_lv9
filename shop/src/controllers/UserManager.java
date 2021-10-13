@@ -34,4 +34,5 @@ public class UserManager {
 		String id = ShopManager.sc.next();
 		
 	}
+	
 }
