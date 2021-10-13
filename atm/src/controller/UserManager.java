@@ -39,7 +39,6 @@ public class UserManager {
 		}
 		else System.out.println("중복된 아이디 입니다.");
 		
-		
 	}
 	
 	private int randomcode() {
