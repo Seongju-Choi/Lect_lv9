@@ -49,19 +49,20 @@ public class UserManager {
 		String pw = ShopManager.sc.next();
 		
 		for(int i=0; i<userList.size(); i++) {
-			if(id.equals(userList.get(i).getId())){
+			if(id.equals(userList.get(i).getId()) && pw.equals(userList.get(i).getPw())){
 				log = i;
 				break;
 			}
 		}
 		if(log == -1) {
-			System.out.println("=== 없는 id 입니다. ===");
+			System.out.println("=== 잘못된 id 혹은 pw 입니다. ===");
 		} else {
 			System.out.println("=== " + userList.get(log).getId() + "로그인 ===");
 			return true;
 		}
 		return false;
 	}
+	
 	public void logOut() {
 		if(log != -1) {
 			System.out.println("=== " + userList.get(log).getId() + "로그아웃 ===");
@@ -69,13 +70,26 @@ public class UserManager {
 		log = -1;
 	}
 	
-	public void logInAdmin() {
+	public boolean logInAdmin() {
 		System.out.print("admin id : ");
 		String id = ShopManager.sc.next();
 		System.out.println("pw : ");
 		String pw = ShopManager.sc.next();
-		System.out.println("name : ");
-		String name = ShopManager.sc.next();
+		
+		for(int i=0; i<userList.size(); i++) {
+			if(id.equals(userList.get(i).getId()) && pw.equals(userList.get(i).getPw())) {
+				log = i;
+				break;
+			}
+		}
+		
+		if(log == -1) System.out.println("=== 잘못된 id 혹은 pw 입니다 ===");
+		else {
+			System.out.println("=== 로그인 성공 ===");
+			return true;
+		}
+		return false;
+		
 		
 	}
 	public void printuserList() {
