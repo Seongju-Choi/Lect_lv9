@@ -15,6 +15,9 @@ public class ShopManager {
 	public void run() {
 		boolean isRun = true;
 		while(isRun) {
+			System.out.print("=== ");
+			UserManager.instance.printuserList();
+			System.out.println(" ===");
 			printMenu();
 			selectMenu();
 		}
@@ -45,7 +48,9 @@ public class ShopManager {
 				um.logOut();
 			}
 			else if(sel == 100) {
-				um.printuserList();
+				if(um.log == 100) {
+					
+				}
 			}
 			else if(sel == 0) {
 				return false;

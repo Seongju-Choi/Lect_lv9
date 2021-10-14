@@ -7,8 +7,7 @@ public class User {
 	private String name;
 	private int UserCode;
 	
-	public User(int usercode, String id, String pw, String name) {
-		this.UserCode = usercode;
+	public User(String id, String pw, String name) {
 		this.Id = id;
 		this.Pw = pw;
 		this.name = name;

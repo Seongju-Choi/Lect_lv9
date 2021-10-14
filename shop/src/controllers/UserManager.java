@@ -13,7 +13,7 @@ public class UserManager {
 	private UserManager() {}
 	
 	public void setAdmin() {
-		User admin = new User(9999, "admin", "0000", "관리자");
+		User admin = new User("admin", "0000", "관리자");
 		this.userList.add(admin);
 	}
 	
@@ -29,7 +29,7 @@ public class UserManager {
 		System.out.print("name : ");
 		String name = ShopManager.sc.next();
 		
-		User newuser = new User(this.userList.size(), id, pw, name);
+		User newuser = new User(id, pw, name);
 		this.userList.add(newuser);
 	}
 	public void deleteAcc() {
@@ -39,6 +39,13 @@ public class UserManager {
 		String pw = ShopManager.sc.next();
 		System.out.print("name : ");
 		String name = ShopManager.sc.next();
+		
+		for(int i=0; i<userList.size(); i++) {
+			if(id.equals(userList.get(i).getId()) && pw.equals(userList.get(i).getPw()) && name.equals(userList.get(i).getName())) {
+				userList.remove(i);
+			}
+		}
+		
 	}
 	
 	public boolean logIn() {
@@ -70,30 +77,8 @@ public class UserManager {
 		log = -1;
 	}
 	
-	public boolean logInAdmin() {
-		System.out.print("admin id : ");
-		String id = ShopManager.sc.next();
-		System.out.println("pw : ");
-		String pw = ShopManager.sc.next();
-		
-		for(int i=0; i<userList.size(); i++) {
-			if(id.equals(userList.get(i).getId()) && pw.equals(userList.get(i).getPw())) {
-				log = i;
-				break;
-			}
-		}
-		
-		if(log == -1) System.out.println("=== 잘못된 id 혹은 pw 입니다 ===");
-		else {
-			System.out.println("=== 로그인 성공 ===");
-			return true;
-		}
-		return false;
-		
-		
-	}
 	public void printuserList() {
-		System.out.println(this.userList.size());
+		System.out.print(this.userList.size());
 	}
 	
 }
