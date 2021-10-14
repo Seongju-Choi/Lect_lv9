@@ -16,7 +16,6 @@ public class UserManager {
 		this.userList.add(admin);
 	}
 	
-	
 	public void joinUser() {
 		System.out.print("id : ");
 		String id = ShopManager.sc.next();
@@ -68,7 +67,12 @@ public class UserManager {
 		
 		for(int i=0; i<userList.size(); i++) {
 			if(id.equals(userList.get(i).getId()) && pw.equals(userList.get(i).getPw())){
-				log = i;
+				if(id.equals("admin")) {
+					log = 100;
+				}
+				else {
+					log = i;
+				}
 				break;
 			}
 		}
