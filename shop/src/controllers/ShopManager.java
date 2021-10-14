@@ -48,9 +48,7 @@ public class ShopManager {
 				um.logOut();
 			}
 			else if(sel == 100) {
-				if(um.log == 100) {
-					
-				}
+				
 			}
 			else if(sel == 0) {
 				return false;

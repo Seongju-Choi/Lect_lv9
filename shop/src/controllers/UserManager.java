@@ -1,11 +1,10 @@
 package controllers;
 
 import java.util.ArrayList;
-import java.util.Random;
 import models.User;
 
 public class UserManager {
-	Random rn = new Random();
+	
 	public static UserManager instance = new UserManager();
 	private ArrayList<User> userList = new ArrayList<>();
 	int log = -1;
@@ -17,9 +16,6 @@ public class UserManager {
 		this.userList.add(admin);
 	}
 	
-	public void randomcode() {
-		
-	}
 	
 	public void joinUser() {
 		System.out.print("id : ");
@@ -29,8 +25,23 @@ public class UserManager {
 		System.out.print("name : ");
 		String name = ShopManager.sc.next();
 		
-		User newuser = new User(id, pw, name);
-		this.userList.add(newuser);
+		boolean check = true;
+		for(int i=0; i<userList.size(); i++) {
+			if(id.equals(userList.get(i).getId())) {
+				check = true;
+			}
+			else {
+				check = false;
+			}
+		}
+		if(check == true) {
+			System.out.println("=== 사용중인 아이디명 입니다. ==-");
+		}
+		else if(check == false) {
+			User newuser = new User(id, pw, name);
+			userList.add(newuser);
+			System.out.println("=== 가입 완료 ===");
+		}
 	}
 	public void deleteAcc() {
 		System.out.print("id : ");
