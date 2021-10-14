@@ -8,7 +8,7 @@ public class Main {
 		
 		UserManager.instance.setAdmin();
 		ShopManager.instance.run();
-
+		
 	}
 
 }

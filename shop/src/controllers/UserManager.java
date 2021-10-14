@@ -7,7 +7,7 @@ public class UserManager {
 	
 	public static UserManager instance = new UserManager();
 	private ArrayList<User> userList = new ArrayList<>();
-	int log = -1;
+	public static int log = -1;
 	
 	private UserManager() {}
 	
@@ -89,10 +89,11 @@ public class UserManager {
 			System.out.println("=== " + userList.get(log).getId() + "로그아웃 ===");
 			log = -1;
 		}
+		else System.out.println("=== 로그인 중인 계정이 존제하지 않습니다. ===");
 	}
 	
 	public void printuserList() {
-		System.out.print(this.userList.size());
+		System.out.println(this.userList.size());
 	}
 	
 }
