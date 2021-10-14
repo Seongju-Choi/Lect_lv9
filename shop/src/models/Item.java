@@ -11,7 +11,14 @@ public class Item {
 		this.category = category;
 	}
 	
-	void print() {
-		System.out.println("[" + name + "]" + "[" + price + "]" + "[" + category + "]");
+	public String getName() {
+		return this.name;
 	}
+	public int getPrice() {
+		return this.price;
+	}
+	public String getCategory() {
+		return this.category;
+	}
+	
 }

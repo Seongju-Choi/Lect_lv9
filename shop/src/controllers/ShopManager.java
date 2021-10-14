@@ -1,7 +1,6 @@
 package controllers;
 
 import java.util.Scanner;
-import controllers.UserManager;
 
 public class ShopManager {
 	
@@ -40,7 +39,7 @@ public class ShopManager {
 				um.deleteAcc();
 			}
 			else if(sel == 3) {
-				um.login();
+				um.logIn();
 			}
 			else if(sel == 4) {
 				if(um.log != -1) {
