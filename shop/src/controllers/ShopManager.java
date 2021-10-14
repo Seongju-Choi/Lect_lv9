@@ -62,7 +62,7 @@ public class ShopManager {
 					return false;
 				}
 				else if(um.log == 100) {
-					if(sel == 1) {}
+					if(sel == 1) {item}
 					else if(sel == 2) {}
 					else if(sel == 3) {}
 					else if(sel == 4) {}
@@ -71,8 +71,12 @@ public class ShopManager {
 					}
 				}
 				else {
-					if(sel == 1) {}
-					else if(sel == 2) {}
+					if(sel == 1) {
+						shoppingMenu();
+					}
+					else if(sel == 2) {
+						
+					}
 					else if(sel == 0) {
 						um.logOut();
 					}
@@ -82,6 +86,12 @@ public class ShopManager {
 			System.out.println("=== 잘못된 입력입니다. ===");
 		}
 		return true;
+	}
+	
+	
+	
+	public void shoppingMenu() {
+		
 	}
 	
 }
