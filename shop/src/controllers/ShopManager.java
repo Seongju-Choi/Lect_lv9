@@ -42,14 +42,10 @@ public class ShopManager {
 				um.logIn();
 			}
 			else if(sel == 4) {
-				if(um.log != -1) {
-					System.out.println("=== 로그아웃 완료 ===");
-					um.log = -1;
-				}
-				else System.out.println("=== 로그인 중인 계정이 없습니다. ===");
+				um.logOut();
 			}
 			else if(sel == 100) {
-				
+				um.printuserList();
 			}
 			else if(sel == 0) {
 				return false;
