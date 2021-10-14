@@ -59,7 +59,6 @@ public class UserManager {
 	}
 	
 	public boolean logIn() {
-		log = -1;
 		System.out.print("id : ");
 		String id = ShopManager.sc.next();
 		System.out.print("pw : ");
@@ -88,8 +87,8 @@ public class UserManager {
 	public void logOut() {
 		if(log != -1) {
 			System.out.println("=== " + userList.get(log).getId() + "·Î±×¾Æ¿ô ===");
+			log = -1;
 		}
-		log = -1;
 	}
 	
 	public void printuserList() {
