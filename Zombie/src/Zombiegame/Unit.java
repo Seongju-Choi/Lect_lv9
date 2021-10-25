@@ -6,6 +6,9 @@ interface Attack{
 interface Damegeable{
 	public void damage(int dmg);
 }
+interface Healing{
+	public void healing(int healpoint);
+}
 
 public class Unit {
 	private String name;
@@ -51,6 +54,10 @@ public class Unit {
 	}
 	public void setFloor(int floor) {
 		this.floor = floor;
+	}
+	
+	public void print() {
+		System.out.println("이름 : " + this.name + "체력 : " + this.hp);
 	}
 	
 	

@@ -6,8 +6,5 @@ public class Hero extends Unit {
 		super (name, hp, atk, def, floor);
 	}
 	
-	public void heroAttck() {
-		
-	}
 	
 }
