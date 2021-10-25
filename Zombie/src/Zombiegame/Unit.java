@@ -14,6 +14,14 @@ public class Unit {
 	private int def;
 	private int floor;
 	
+	public Unit (String name, int hp, int atk, int def, int floor) {
+		this.name = name;
+		this.hp = hp;
+		this.atk = atk;
+		this.def = def;
+		this.floor = floor;
+	}
+	
 	public String getName() {
 		return this.name;
 	}
