@@ -1,10 +1,10 @@
-package game;
+package Zombiegame;
 
 interface Attack{
 	public void attack(); 
 }
 interface Damegeable{
-	public void 
+	public void damage(int dmg);
 }
 
 public class Unit {

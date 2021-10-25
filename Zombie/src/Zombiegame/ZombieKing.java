@@ -1,4 +1,4 @@
-package game;
+package Zombiegame;
 
 public class ZombieKing {
 
