@@ -11,7 +11,23 @@ public class Game {
 	ArrayList<Unit> enemy = new ArrayList<>();
 	private Game() {}
 	private static Game instance = new Game();
-	public void getsInstance() = {} 
+	public static Game getInstance() {
+			return instance;
+	} 
+	
+	public void run() {
+		
+		boolean isRun = true;
+		while(isRun) {
+			setGame();
+			printGame();
+			int sel = sc.nextInt();
+			
+			if(sel == 1) {}
+			else if(sel == 2) {}
+			else if(sel == 3) {move();}
+		}
+	}
 	
 	public void setGame() {
 		player = new Hero("용사", 100, 5, 5, 0);
@@ -21,6 +37,24 @@ public class Game {
 	}
 	public void printGame() {
 		System.out.println("[현재 층 : " + player.getFloor() +"]");
+		System.out.println("[1]회복하기");
+		System.out.println("[2]강화하기");
+		System.out.println("[3]다음층으로 이동");
+		System.out.print("입력 : ");
+	}
+	
+	public void move() {
+		int floor = player.getFloor() +1;
+		System.out.println(floor);
+		player.setFloor(floor);
+		System.out.println(player.getFloor());
+		
+	}
+	public void healing() {
+		if(player.getHp() >= 0) {
+			
+		}
+		else
 	}
 	
 	
